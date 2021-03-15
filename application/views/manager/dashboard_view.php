@@ -44,7 +44,7 @@
             </dl>
         </div><!-- /.box-body -->
     </div><!-- /.box -->
-	<div class="callout callout-info">
+	<div class="callout callout-success">
     	<h4>Informasi</h4>
         <p>Ini adalah area administratif ZYA CBT, yang memiliki platform dan bahasa user-friendly untuk membuat, mengelola dan melaksanakan ujian online.</p>
     </div>
@@ -83,7 +83,7 @@
             </p>
         </div>
     </div>
-    <div class="box box-success box-solid">
+    <div class="box box-primary box-solid">
 		<div class="box-header with-border">
         	<h3 class="box-title">Petunjuk Penggunaan</h3>
         </div><!-- /.box-header -->

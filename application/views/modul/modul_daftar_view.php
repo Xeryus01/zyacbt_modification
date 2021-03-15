@@ -1,13 +1,13 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Daftar Soal
-        <small>Daftar soal dan jawaban berdasarkan Modul dan Topik</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Daftar Soal</li>
-    </ol>
+	<h1>
+		Daftar Soal
+		<small>Daftar soal dan jawaban berdasarkan Modul dan Topik</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Daftar Soal</li>
+	</ol>
 </section>
 
 <!-- Main content -->

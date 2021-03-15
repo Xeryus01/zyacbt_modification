@@ -14,7 +14,7 @@
 <section class="content">
 	<div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="callout callout-success">
                 <h4>Informasi</h4>
                 <p>Lakukan Pengaturan nama pelaksana ZYACBT sebelum mencetak kartu peserta agar kartu sesuai dengan Organisasi tempat anda melaksanakan Tes.</p>
                 <p>Pastikan terlebih dahulu data Group dan data Peserta sudah ter-upload.</p>

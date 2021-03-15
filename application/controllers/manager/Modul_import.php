@@ -43,7 +43,6 @@ class Modul_import extends Member_Controller
 
 						$jml_soal = $this->cbt_soal_model->count_by_kolom('soal_topik_id', $topik->topik_id)->row()->hasil;
 
-						// $select = $select . '<option value="' . $topik->topik_id . '">' . $topik->modul_nama . ' - ' . $topik->topik_nama . ' [' . $jml_soal . ']</option>';
 						$select = $select . '<option value="' . $topik->topik_id . '">' . $topik->modul_nama . ' - ' . $topik->topik_nama . '</option>';
 					}
 				}
@@ -63,7 +62,6 @@ class Modul_import extends Member_Controller
 								$counter++;
 
 								$jml_soal = $this->cbt_soal_model->count_by_kolom('soal_topik_id', $topik->topik_id)->row()->hasil;
-								// $select = $select . '<option value="' . $topik->topik_id . '">' . $topik->modul_nama . ' - ' . $topik->topik_nama . ' [' . $jml_soal . ']</option>';
 								$select = $select . '<option value="' . $topik->topik_id . '">' . $topik->modul_nama . ' - ' . $topik->topik_nama . '</option>';
 							}
 

@@ -1,13 +1,13 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Mengelola Soal
-        <small>Mengelola soal berdasarkan modul dan topik</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Soal</li>
-    </ol>
+	<h1>
+		Mengelola Soal
+		<small>Mengelola soal berdasarkan modul dan topik</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Soal</li>
+	</ol>
 </section>
 
 <!-- Main content -->
@@ -381,8 +381,7 @@
             if (data.data == 1) {
                 $('#hapus-id').val(data.id);
                 $('#hapus-soal').html(data.soal);
-
-                $("#modal-proses").modal('hide');
+		$("#modal-proses").modal('hide');
                 $("#modal-hapus-soal").modal("show");
             } else {
                 $("#modal-proses").modal('hide');
@@ -435,6 +434,11 @@
 
     $(function() {
         $('#topik').select2();
+        
+        $("#topik").change(function(){
+            refresh_topik();
+            refresh_table();
+        });
 
         $('#tambah-audio').change(function(e) {
             var fileName = e.target.files[0].name;

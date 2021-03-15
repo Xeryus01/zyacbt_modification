@@ -1,12 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 /**
-* ZYA CBT
-* Achmad Lutfi
-* achmdlutfi@gmail.com
-* achmadlutfi.wordpress.com
-*/
-class Tes extends CI_Controller {
+ * ZYA CBT
+ * Achmad Lutfi
+ * achmdlutfi@gmail.com
+ * achmadlutfi.wordpress.com
+ */
+class Tes extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -23,11 +24,12 @@ class Tes extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index(){
+	public function index()
+	{
 		$ip = $this->input->user_agent();
 		echo $ip;
 		$session = session_id();
-		echo '<br>'.$session;
+		echo '<br>' . $session;
 		$this->load->view('welcome_message');
 	}
 }

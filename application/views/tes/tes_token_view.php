@@ -15,7 +15,7 @@
 	<div class="row">
         <div class="col-xs-12">
             <?php echo form_open($url.'/token','id="form-token"'); ?>
-                <div class="callout callout-info">
+                <div class="callout callout-success">
                     <h4>Perhatian</h4>
                     <p>Silahkan klik Generate Token untuk mendapatkan token yang akan diberikan ke user. Masa aktif Token berlaku selama satu hari.</p>
                 </div>

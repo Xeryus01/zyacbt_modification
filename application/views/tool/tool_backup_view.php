@@ -14,7 +14,7 @@
 <section class="content">
 	<div class="row">
         <div class="col-xs-12">
-            <div class="callout callout-info">
+            <div class="callout callout-success">
                 <h4>Informasi</h4>
                 <p>Lakukan Backup Data secara berkala. Lakukan Backup pada Database dan Data yang telah di upload untuk keamanan.</p>
             </div>

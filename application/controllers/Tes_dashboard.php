@@ -70,10 +70,6 @@ class Tes_dashboard extends Tes_Controller
 	 *
 	 * @param      <type>  $tes_id  The tes identifier
 	 */
-
-	/**
-	 * MULAI EDIT PAKET SOAL DARI SINI
-	 */
 	function konfirmasi_test($tes_id = null)
 	{
 		if (!empty($tes_id)) {
@@ -336,22 +332,6 @@ class Tes_dashboard extends Tes_Controller
 		echo json_encode($status);
 	}
 
-	public function tests()
-	{
-		$paket = $this->cbt_paket->get_by_kolom('topik_id', 2)->result();
-		$package = array();
-		foreach ($paket as $pack) {
-			array_push($package, $pack->paket_id);
-			echo $pack->paket_id . "\n";
-		}
-		$paket = array_rand($package, 1);
-		echo $package[$paket];
-	}
-
-	/**
-	 * AKHIR EDIT PAKET
-	 */
-
 
 	/**
 	 * Merubah password user tes
@@ -484,7 +464,7 @@ class Tes_dashboard extends Tes_Controller
 					}
 				} else {
 					$record[] = '';
-					$record[] = '<a href="' . site_url() . '/' . $this->url . '/konfirmasi_test/' . $temp->tes_id . '" style="cursor: pointer;" class="btn btn-success btn-xs">Kerjakan</a>';
+					$record[] = '<a href="' . site_url() . '/' . $this->url . '/konfirmasi_test/' . $temp->tes_id . '" style="cursor: pointer;" class="btn btn-default btn-xs">Kerjakan</a>';
 				}
 
 				$output['aaData'][] = $record;
