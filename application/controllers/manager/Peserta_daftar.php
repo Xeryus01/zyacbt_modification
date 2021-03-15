@@ -49,11 +49,16 @@ class Peserta_daftar extends Member_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 			$data['user_name'] = $this->input->post('tambah-username', true);
-			$data['user_password'] = $this->input->post('tambah-password', true);
+			$data['user_password'] = password_hash($this->input->post('tambah-password', true), PASSWORD_DEFAULT);
 			$data['user_email'] = $this->input->post('tambah-email', true);
 			$data['user_firstname'] = $this->input->post('tambah-nama', true);
 			$data['user_detail'] = $this->input->post('tambah-detail', true);
 			$data['user_grup_id'] = $this->input->post('tambah-group', true);
+			$data['phone'] = $this->input->post('tambah-phone', true);
+			$data['asal_sma'] = $this->input->post('tambah-sma', true);
+			$data['address'] = $this->input->post('tambah-address', true);
+			// $data['status'] = $this->input->post('tambah-userstatus', true);
+			$data['status'] = 1;
 
 			if ($this->cbt_user_grup_model->count_by_kolom('grup_id', $data['user_grup_id'])->row()->hasil > 0) {
 				if ($this->cbt_user_model->count_by_kolom('user_name', $data['user_name'])->row()->hasil > 0) {
@@ -92,6 +97,9 @@ class Peserta_daftar extends Member_Controller
 				$data['email'] = $query->user_email;
 				$data['detail'] = $query->user_detail;
 				$data['group'] = $query->user_grup_id;
+				$data['phone'] = $query->phone;
+				$data['sma'] = $query->asal_sma;
+				$data['address'] = $query->address;
 			}
 		}
 		echo json_encode($data);
@@ -145,11 +153,15 @@ class Peserta_daftar extends Member_Controller
 				$status['status'] = 1;
 				$status['pesan'] = 'Data Peserta berhasil dihapus !';
 			} else if ($pilihan == 'simpan') { //simpan
-				$data['user_password'] = $this->input->post('edit-password', true);
+				$data['user_password'] = password_hash($this->input->post('edit-password', true), PASSWORD_DEFAULT);
 				$data['user_firstname'] = $this->input->post('edit-nama', true);
 				$data['user_email'] = $this->input->post('edit-email', true);
 				$data['user_grup_id'] = $this->input->post('edit-group', true);
 				$data['user_detail'] = $this->input->post('edit-detail', true);
+				$data['phone'] = $this->input->post('edit-phone', true);
+				$data['address'] = $this->input->post('edit-address', true);
+				$data['asal_sma'] = $this->input->post('edit-sma', true);
+				$data['status'] = 1;
 
 				$this->cbt_user_model->update('user_id', $id, $data);
 

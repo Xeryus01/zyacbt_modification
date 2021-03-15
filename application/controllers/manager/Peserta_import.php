@@ -116,17 +116,15 @@ class Peserta_import extends Member_Controller
                             $jmldataerror++;
                         } else {
                             $data['user_name'] = $kolom1;
-
                             $data['user_firstname'] = $kolom2;
-
                             $data['phone'] = $kolom3;
                             $data['address'] = $kolom4;
                             $data['asal_sma'] = $kolom5;
                             $data['user_email'] = $kolom6;
-                            $data['user_password'] = $kolom7;
+                            $data['user_password'] = password_hash($kolom7, PASSWORD_DEFAULT);
                             $data['user_grup_id'] = $this->cbt_user_grup_model->get_by_kolom_limit('grup_nama', $kolom8, 1)->row()->grup_id;
                             $data['user_detail'] = $kolom9;
-
+                            $data['status'] = 1;
 
                             $this->cbt_user_model->save($data);
                             $jmldatasukses++;

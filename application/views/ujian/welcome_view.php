@@ -63,7 +63,7 @@
 								<div class="col-md-12 control text-center">
 									<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
 										Belum punya akun?
-										<a href="<?= base_url() ?>/registrasi">Daftar</a>
+										<a href="<?= base_url('registrasi') ?>">Daftar</a>
 										</a>
 									</div>
 								</div>
