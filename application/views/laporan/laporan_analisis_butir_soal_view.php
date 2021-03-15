@@ -14,7 +14,7 @@
 <section class="content">
 	<div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="callout callout-success">
                 <h4>Informasi</h4>
                 <p>Pilih Grup peserta dan Tes untuk mendapatkan analisis butir soal.</p>
                 <p>Urutan soal yang dianalisis sesuai dengan urutan soal saat dilakukan input soal seperti pada Daftar Soal pada menu Modul.</p>

@@ -16,7 +16,7 @@
 		<?php
 			if(!empty($informasi)){
 				?>
-				<div class="callout callout-info">
+				<div class="callout callout-success">
                     <h4>Informasi</h4>
                     <?php 
 					echo $informasi
@@ -25,14 +25,14 @@
 				<?php
 			}else{
 				?>
-				<div class="callout callout-info">
+				<div class="callout callout-success">
 					<h4>Informasi</h4>
 					<p>Silahkan pilih Tes yang diikuti dari daftar tes yang tersedia dibawah ini. Apabila tes tidak muncul, silahkan menghubungi Operator yang bertugas.</p>
 				</div>
 				<?php
 			}
 		?>
-        <div class="box box-success box-solid">
+        <div class="box box-primary box-solid">
             <div class="box-header with-border">
                 <h3 class="box-title">Daftar Tes</h3>
             </div><!-- /.box-header -->

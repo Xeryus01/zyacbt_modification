@@ -12,51 +12,62 @@
 
 	<!-- Main content -->
     <section class="content">
-    	<div class="row">
-        <?php echo form_open('tes_kerjakan/simpan_jawaban','id="form-kerjakan"')?>
-            <input type="hidden" name="tes-id" id="tes-id" value="<?php if(!empty($tes_id)){ echo $tes_id; } ?>">
-            <input type="hidden" name="tes-user-id" id="tes-user-id" value="<?php if(!empty($tes_user_id)){ echo $tes_user_id; } ?>">
-            <input type="hidden" name="tes-soal-id" id="tes-soal-id" value="<?php if(!empty($tes_soal_id)){ echo $tes_soal_id; } ?>">
-            <input type="hidden" name="tes-soal-nomor" id="tes-soal-nomor"  value="<?php if(!empty($tes_soal_nomor)){ echo $tes_soal_nomor; } ?>">
-            <input type="hidden" name="tes-soal-jml" id="tes-soal-jml" value="<?php if(!empty($tes_soal_jml)){ echo $tes_soal_jml; } ?>">
-            <input type="hidden" name="tes-soal-ragu" id="tes-soal-ragu" value="<?php if(!empty($tes_ragu)){ echo $tes_ragu; } ?>">
-    		<div class="box box-success box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Soal <span id="judul-soal"><?php if(!empty($tes_soal_nomor)){ echo 'ke '.$tes_soal_nomor; } ?></span></h3>
-                    <div class="box-tools pull-right">
-                        <div class="pull-right">
-                            <div id="sisa-waktu"></div>
+    	<div class="row equal-cols">
+        <div class="col-sm-8">
+            <?php echo form_open('tes_kerjakan/simpan_jawaban','id="form-kerjakan"')?>
+                <input type="hidden" name="tes-id" id="tes-id" value="<?php if(!empty($tes_id)){ echo $tes_id; } ?>">
+                <input type="hidden" name="tes-user-id" id="tes-user-id" value="<?php if(!empty($tes_user_id)){ echo $tes_user_id; } ?>">
+                <input type="hidden" name="tes-soal-id" id="tes-soal-id" value="<?php if(!empty($tes_soal_id)){ echo $tes_soal_id; } ?>">
+                <input type="hidden" name="tes-soal-nomor" id="tes-soal-nomor"  value="<?php if(!empty($tes_soal_nomor)){ echo $tes_soal_nomor; } ?>">
+                <input type="hidden" name="tes-soal-jml" id="tes-soal-jml" value="<?php if(!empty($tes_soal_jml)){ echo $tes_soal_jml; } ?>">
+                <input type="hidden" name="tes-soal-ragu" id="tes-soal-ragu" value="<?php if(!empty($tes_ragu)){ echo $tes_ragu; } ?>">
+                <div class="box box-primary box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Soal <span id="judul-soal"><?php if(!empty($tes_soal_nomor)){ echo 'ke '.$tes_soal_nomor; } ?></span></h3>
+                        <div class="box-tools pull-right">
+                            <div class="pull-right">
+                                <div id="sisa-waktu"></div>
+                            </div>
                         </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div id="isi-tes-soal" style="font-size: 15px;">
+                            <?php if(!empty($tes_soal)){ echo $tes_soal; } ?>
+                        </div>
+                    </div><!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-primary hide" id="btn-sebelumnya">Soal Sebelumnya</button>&nbsp;&nbsp;&nbsp;
+                        <div class="btn btn-warning" id="btn-ragu" onclick="ragu()">
+                            <input type="checkbox" style="width:10px;height:10px;" name="btn-ragu-checkbox" id="btn-ragu-checkbox" <?php if(!empty($tes_ragu)){ echo "checked"; } ?> /> Ragu-ragu
+                        </div>&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary" id="btn-selanjutnya">Soal Selanjutnya</button>
                     </div>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                    <div id="isi-tes-soal" style="font-size: 15px;">
-                        <?php if(!empty($tes_soal)){ echo $tes_soal; } ?>
-                    </div>
-                </div><!-- /.box-body -->
-                <div class="box-footer">
-                    <button type="button" class="btn btn-default hide" id="btn-sebelumnya">Soal Sebelumnya</button>&nbsp;&nbsp;&nbsp;
-                    <div class="btn btn-warning" id="btn-ragu" onclick="ragu()">
-                        <input type="checkbox" style="width:10px;height:10px;" name="btn-ragu-checkbox" id="btn-ragu-checkbox" <?php if(!empty($tes_ragu)){ echo "checked"; } ?> /> Ragu-ragu
-                    </div>&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-default" id="btn-selanjutnya">Soal Selanjutnya</button>
-                </div>
-            </div><!-- /.box -->
-        </form>
+                </div><!-- /.box -->
+            </form>
     	</div>
-        <div class="row">
-            <div class="box box-success box-solid">
+        <div class="col-sm-4">
+            <div class="box box-primary box-solid">
                 <div class="box-header with-border">
                     <h3 class="box-title">Daftar Soal</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                    <?php if(!empty($tes_daftar_soal)){ echo $tes_daftar_soal; } ?>
-                    <p class="help-block">Soal yang sudah dijawab akan berwarna Biru.</p>
+                    <div>
+                        <?php if(!empty($tes_daftar_soal)){ echo $tes_daftar_soal; } ?>
+                    </div>
+                    <div>
+                        <label></label>
+                    </div>
+                    <div>
+                        <p class="help-block"> <svg class="btn-warning" width="5em" height="1em"></svg> Ragu-ragu</p>
+                        <p class="help-block"> <svg class="btn-green" width="5em" height="1em"></svg> Sudah dijawab</p>
+                        <p class="help-block"> <svg class="btn-default" width="5em" height="1em"></svg> Belum dijawab</p>
+                    </div>
                 </div><!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-default pull-right" id="btn-hentikan">Hentikan Tes</button>
+                    <button class="btn btn-danger pull-right" id="btn-hentikan">Hentikan Tes</button>
                 </div>
             </div><!-- /.box -->
+        </div>
         </div>
     </section><!-- /.content -->
 
@@ -72,7 +83,7 @@
                     <div class="row-fluid">
                         <div class="box-body">
                             <div id="form-pesan"></div>
-                            <div class="callout callout-info">
+                            <div class="callout callout-success">
                                 <p>Apakah anda yakin mengakhiri mata uji ini ?
 								<br />Jawaban Tes yang sudah selesai tidak dapat diubah.
 								</p>
@@ -100,7 +111,7 @@
                     </div>
                 </div>
 				<div class="box-footer">
-					<button type="submit" id="tambah-simpan" class="btn btn-primary">Hentikan Tes</button>
+					<button type="submit" id="tambah-simpan" class="btn btn-danger">Hentikan Tes</button>
 					<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
 				</div>
             </div>
@@ -164,13 +175,13 @@
                     if(data.tessoal_dikerjakan==1){
                         if($('#tes-soal-ragu').val()==0){
                             // Membuat menjadi ragu-ragu
-                            $('#btn-soal-'+$('#tes-soal-nomor').val()).removeClass('btn-primary');
+                            $('#btn-soal-'+$('#tes-soal-nomor').val()).removeClass('btn-green');
                             $('#btn-soal-'+$('#tes-soal-nomor').val()).addClass('btn-warning');
                             $('#btn-ragu-checkbox').prop("checked", true);
                             $('#tes-soal-ragu').val(1);
                         }else{
                             $('#btn-soal-'+$('#tes-soal-nomor').val()).removeClass('btn-warning');
-                            $('#btn-soal-'+$('#tes-soal-nomor').val()).addClass('btn-primary');
+                            $('#btn-soal-'+$('#tes-soal-nomor').val()).addClass('btn-green');
                             $('#btn-ragu-checkbox').prop("checked", false);
                             $('#tes-soal-ragu').val(0);
                         }
@@ -378,7 +389,7 @@
                             notify_success(obj.pesan);
                             $('#btn-soal-'+obj.nomor_soal).removeClass('btn-default');
                             $('#btn-soal-'+obj.nomor_soal).removeClass('btn-warning');
-                            $('#btn-soal-'+obj.nomor_soal).addClass('btn-primary');
+                            $('#btn-soal-'+obj.nomor_soal).addClass('btn-green');
                         }else if(obj.status==2){
                             window.location.reload();
                         }else{

@@ -361,7 +361,7 @@ class Tes_kerjakan extends Tes_Controller {
                         if(!empty($soal->tessoal_change_time)){
                             if($soal->tessoal_ragu==0){
                                 // Jika soal tidak ragu-ragu
-                                $data_soal = $data_soal.'<button id="btn-soal-'.$soal->tessoal_order.'" onclick="soal(\''.$soal->tessoal_id.'\')" class="btn btn-primary" style="margin-bottom: 5px;" title="Soal ke '.$soal->tessoal_order.'">'.$soal->tessoal_order.'</button>
+                                $data_soal = $data_soal.'<button id="btn-soal-'.$soal->tessoal_order.'" onclick="soal(\''.$soal->tessoal_id.'\')" class="btn btn-green" style="margin-bottom: 5px;" title="Soal ke '.$soal->tessoal_order.'">'.$soal->tessoal_order.'</button>
 
                                 ';
                             }else{
@@ -474,11 +474,10 @@ class Tes_kerjakan extends Tes_Controller {
                                 // mengganti [baseurl] ke alamat sesungguhnya pada tag img / gambars
                                 $temp_jawaban = $jawaban->jawaban_detail;
                                 $temp_jawaban = str_replace("[base_url]", base_url(), $temp_jawaban);
-
                                 if($jawaban->soaljawaban_selected==1){
-                                    $soal = $soal.'<div class="radio"><label><input type="radio" onchange="jawab()" name="soal-jawaban" value="'.$jawaban->soaljawaban_jawaban_id.'" checked> '.$temp_jawaban.'</label></div>';
+                                    $soal = $soal.'<div class="radio custom-control custom-radio"><label class="custom-control-label"><input type="radio" onchange="jawab()" name="soal-jawaban" class="custom-control-input" value="'.$jawaban->soaljawaban_jawaban_id.'" checked>'.$temp_jawaban.'</label></div>';
                                 }else{
-                                    $soal = $soal.'<div class="radio"><label><input type="radio" onchange="jawab()" name="soal-jawaban" value="'.$jawaban->soaljawaban_jawaban_id.'" > '.$temp_jawaban.'</label></div>';
+                                    $soal = $soal.'<div class="radio custom-control custom-radio"><label class="custom-control-label"><input type="radio" onchange="jawab()" name="soal-jawaban" class="custom-control-input" value="'.$jawaban->soaljawaban_jawaban_id.'" checked>'.$temp_jawaban.'</label></div>';
                                 }
                             }
                         }

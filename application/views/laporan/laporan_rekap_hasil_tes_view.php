@@ -14,7 +14,7 @@
 <section class="content">
 	<div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="callout callout-success">
                 <h4>Informasi</h4>
                 <p>Pilih Grup peserta yang akan di export Hasil tes nya pada bagian samping halaman ini, dan pilih rentang waktu Tes tersebut dikerjakan.</p>
                 <p>Siswa yang tidak mengikuti Tes, maka Hasilnya akan bernilai N/A pada file hasil Export.</p>

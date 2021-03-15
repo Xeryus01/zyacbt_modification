@@ -14,7 +14,7 @@
 <section class="content">
 	<div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="callout callout-success">
                 <h4>Informasi</h4>
                 <p>Data siswa yang di import adalah data yang akan digunakan siswa untuk memulai tes atau ujian. Form data siswa dapat di Download di menu Download yang ada di pojok kanan kotak dialog.</p>
                 <p>Pastikan terlebih dahulu data Group sudah terdaftar sebelum melakukan Import Data</p>
