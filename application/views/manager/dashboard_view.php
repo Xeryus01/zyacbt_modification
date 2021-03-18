@@ -93,7 +93,6 @@
                 <dd>
                 	Kelompok Data Modul digunakan untuk menambah modul, topik, dan soal. Serta digunakan untuk mengatur file dengan memanfaatkan File Manager.
                 	<ol>
-                		<li>Modul</li>
                 		<li>Topik</li>
                 		<li>Soal</li>
                 		<li>Import Soal Word</li>
@@ -109,6 +108,7 @@
                 		<li>Daftar Group</li>
                 		<li>Daftar Peserta</li>
                 		<li>Import Data Peserta</li>
+                        <li>Konfirmasi Peserta</li>
 						<li>Cetak Kartu</li>
                 	</ol>
                 <dt>Data Tes</dt>

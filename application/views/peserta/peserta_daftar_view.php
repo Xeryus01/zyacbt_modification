@@ -58,7 +58,7 @@
                                 <th>No.</th>
                                 <th>Username</th>
                                 <th class="all">Nama</th>
-                                <th>Kelompok</th>
+                                <th>Group</th>
                                 <th>Keterangan</th>
                                 <th class="all">Action</th>
                                 <th class="all"></th>
