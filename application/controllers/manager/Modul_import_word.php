@@ -348,7 +348,7 @@ class Modul_import_word extends Member_Controller
 		$excel = PHPExcel_IOFactory::load($inputFileName);
 		$worksheet = $excel->getSheet(0);
 		$highestRow = $worksheet->getHighestRow();
-		$pesan = '<div class="alert alert-info alert-dismissable">
+		$pesan = '<div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <h4><i class="icon fa fa-info"></i> Informasi!</h4>';
 

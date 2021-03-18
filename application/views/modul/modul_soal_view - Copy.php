@@ -256,7 +256,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="btn-image" class="btn btn-primary">Masukkan</button>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ class Tes_daftar extends Member_Controller
 			if ($status == '0') {
 				$data['pesan_hapus'] = '<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-info"></i> Perhatian</h4>' . $pesan . '</div>';
 			} else {
-				$data['pesan_hapus'] = '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-info"></i> Informasi</h4>' . $pesan . '</div>';
+				$data['pesan_hapus'] = '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-info"></i> Informasi</h4>' . $pesan . '</div>';
 			}
 		}
 
