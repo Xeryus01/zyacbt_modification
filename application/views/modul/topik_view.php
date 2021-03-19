@@ -121,7 +121,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="tambah-simpan" class="btn btn-primary">Tambah</button>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@
                 <div class="modal-footer">
                     <button type="button" id="edit-hapus" class="btn btn-default pull-left">Hapus</button>
                     <button type="button" id="edit-simpan" class="btn btn-primary">Simpan</button>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="btn-hapus" class="btn btn-default pull-left">Hapus</button>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>

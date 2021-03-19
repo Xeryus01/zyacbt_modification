@@ -103,7 +103,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="btn-hapus" class="btn btn-default">Hapus</button>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>

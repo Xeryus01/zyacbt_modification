@@ -108,7 +108,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" id="btn-nilai-simpan" class="btn btn-primary">Simpan</button>
-                        <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                        <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                     </div>
                 </div>
             </div>

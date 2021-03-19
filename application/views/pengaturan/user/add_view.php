@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
                 </div>
             </div>
         </div>

@@ -84,7 +84,7 @@
                 </div><!-- /.box-header -->
 
                 <div class="box-body">
-                    <div class="callout callout-info">
+                    <div class="callout callout-success">
                         <h4>Konfirmasi</h4>
                         <p>Silahkan cek soal pilihan ganda yang telah dikirim. Jika soal sudah sesuai, silahkan klik tombol Simpan dibawah ini.</p>
                         <input type="hidden" name="konfirmasi-import-soal" id="konfirmasi-import-soal">
