@@ -278,11 +278,11 @@ CREATE TABLE `cbt_user` (
   `user_birthplace` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_level` smallint(3) UNSIGNED NOT NULL DEFAULT 1,
   `user_detail` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(2) NOT NULL,
-  `bukti` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `bukti` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `asal_sma` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
