@@ -487,7 +487,7 @@ class Tes_kerjakan extends Tes_Controller
                                 if ($jawaban->soaljawaban_selected == 1) {
                                     $soal = $soal . '<div class="radio custom-control custom-radio"><label class="custom-control-label"><input type="radio" onchange="jawab()" name="soal-jawaban" class="custom-control-input" value="' . $jawaban->soaljawaban_jawaban_id . '" checked>' . $temp_jawaban . '</label></div>';
                                 } else {
-                                    $soal = $soal . '<div class="radio custom-control custom-radio"><label class="custom-control-label"><input type="radio" onchange="jawab()" name="soal-jawaban" class="custom-control-input" value="' . $jawaban->soaljawaban_jawaban_id . '" checked>' . $temp_jawaban . '</label></div>';
+                                    $soal = $soal . '<div class="radio custom-control custom-radio"><label class="custom-control-label"><input type="radio" onchange="jawab()" name="soal-jawaban" class="custom-control-input" value="' . $jawaban->soaljawaban_jawaban_id . '">' . $temp_jawaban . '</label></div>';
                                 }
                             }
                         }

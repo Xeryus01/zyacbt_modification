@@ -1,13 +1,13 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-	<h1>
-		Mengimport Soal dari Word
-		<small>Melakukan Import Soal pilihan ganda berdasarkan modul dan topik</small>
-	</h1>
-	<ol class="breadcrumb">
-		<li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">Import Soal Word</li>
-	</ol>
+    <h1>
+        Mengimport Soal dari Word
+        <small>Melakukan Import Soal pilihan ganda berdasarkan modul dan topik</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="<?php echo site_url(); ?>/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Import Soal Word</li>
+    </ol>
 </section>
 
 <!-- Main content -->
@@ -113,14 +113,14 @@
                 <h4 class="modal-title">Informasi Import Soal</h4>
             </div>
             <div class="modal-body">
-                <div class="callout callout-info">
+                <div class="callout callout-success">
                     <p>
-						Import Soal pilihan ganda berhasil.<br />
-						Berikut informasi soal yang berhasil di import :<br/>
-						Jumlah Soal : <span id="info-jml-soal"></span><br/>
-						Jumlah Jawaban : <span id="info-jml-jawaban"></span><br/>
-					</p>
-					
+                        Import Soal pilihan ganda berhasil.<br />
+                        Berikut informasi soal yang berhasil di import :<br />
+                        Jumlah Soal : <span id="info-jml-soal"></span><br />
+                        Jumlah Jawaban : <span id="info-jml-jawaban"></span><br />
+                    </p>
+
                 </div>
             </div>
             <div class="modal-footer">

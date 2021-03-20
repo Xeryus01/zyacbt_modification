@@ -220,7 +220,8 @@ class Peserta_daftar extends Member_Controller
 			$query_group = $this->cbt_user_grup_model->get_by_kolom_limit('grup_id', $temp->user_grup_id, 1)->row();
 
 			$record[] = $query_group->grup_nama;
-			$record[] = $temp->user_detail;
+			$record[] = $temp->asal_sma;
+			$record[] = $temp->phone;
 
 			$record[] = '<a onclick="edit(\'' . $temp->user_id . '\')" style="cursor: pointer;" class="btn btn-default btn-xs">Edit</a>';
 			$record[] = '<input type="checkbox" name="edit-user-id[' . $temp->user_id . ']" >';

@@ -59,13 +59,15 @@
                                 <th>Username</th>
                                 <th class="all">Nama</th>
                                 <th>Group</th>
-                                <th>Keterangan</th>
+                                <th>Asal SMA</th>
+                                <th>No HP</th>
                                 <th class="all">Action</th>
                                 <th class="all"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td> </td>
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
@@ -468,6 +470,10 @@
                     "bSearchable": false,
                     "bSortable": false,
                     "sWidth": "80px"
+                },
+                {
+                    "bSearchable": false,
+                    "bSortable": false
                 },
                 {
                     "bSearchable": false,
