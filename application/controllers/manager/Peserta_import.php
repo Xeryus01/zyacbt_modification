@@ -94,13 +94,16 @@ class Peserta_import extends Member_Controller
                     $kosong++;
                 }
                 if (empty($kolom3)) {
-                    $kosong++;
+                    $kolom3 = NULL;
+                }
+                if (empty($kolom4)) {
+                    $kolom4 = NULL;
                 }
                 if (empty($kolom5)) {
                     $kosong++;
                 }
                 if (empty($kolom6)) {
-                    $kosong++;
+                    $kolom6 = NULL;
                 }
                 if (empty($kolom7)) {
                     $kosong++;

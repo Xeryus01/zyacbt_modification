@@ -12,6 +12,9 @@ class Peserta_kartu extends Member_Controller
 		$this->load->model('cbt_user_grup_model');
 		$this->load->model('cbt_user_model');
 		$this->load->model('cbt_konfigurasi_model');
+		$this->load->model('cbt_tesgrup_model');
+		$this->load->model('cbt_tes_model');
+		$this->load->model('cbt_tes_token_model');
 
 		parent::cek_akses($this->kode_menu);
 	}
@@ -51,14 +54,21 @@ class Peserta_kartu extends Member_Controller
 				$kartu = '';
 				$query_user = $query_user->result();
 
-				$query_konfig = $this->cbt_konfigurasi_model->get_by_kolom_limit('konfigurasi_kode', 'cbt_nama', 1);
-				$cbt_nama = 'Computer Based-Test';
-				if ($query_konfig->num_rows() > 0) {
-					$cbt_nama = $query_konfig->row()->konfigurasi_isi;
-				}
+				$tes_id = $this->cbt_tesgrup_model->get_by_kolom_limit('tstgrp_grup_id', $grup_id, 1)->row()->tstgrp_tes_id;
+				$start = $this->cbt_tes_model->get_by_kolom_limit('tes_id', $tes_id, 1)->row()->tes_begin_time;
+
+				// $query_konfig = $this->cbt_konfigurasi_model->get_by_kolom_limit('konfigurasi_kode', 'cbt_nama', 'cbt_regional', 'cbt_tanggal', 1);
+				// $cbt_nama = 'TRY OUT NASIONAL STIS';
+				// $cbt_regional = 'REGIONAL PUSAT';
+				$time = explode(" ", $start);
+				$cbt_tanggal = $time[0];
+				// if ($query_konfig->num_rows() > 0) {
+				// 	$cbt_nama = $query_konfig->row()->konfigurasi_isi;
+				// 	$cbt_regional = $query_konfig->row()->konfigurasi_isi;
+				// 	$cbt_tanggal = $query_konfig->row()->konfigurasi_isi;
+				// }
 
 				$query_group = $this->cbt_user_grup_model->get_by_kolom_limit('grup_id', $grup_id, 1);
-				$group = 'NULL';
 				if ($query_group->num_rows() > 0) {
 					$group = $query_group->row()->grup_nama;
 				}
@@ -66,13 +76,19 @@ class Peserta_kartu extends Member_Controller
 				foreach ($query_user as $temp) {
 					$kartu = $kartu . '
 						<div class="kartu">
-							<div class="header">' . $cbt_nama . '</div>
+
+						<div style="margin-left: 20px">
+							<div class="header">' . $group . '</div>
+						</tr>
+						</div>
+
 							<hr />
 							<table>
 								<tr>
 									<td width="95px">Nama</td>
 									<td width="5px">:</td>
 									<td width="210px">' . $temp->user_firstname . '</td>
+									
 								</tr>
 								<tr>
 									<td>Username</td>
@@ -80,21 +96,22 @@ class Peserta_kartu extends Member_Controller
 									<td>' . $temp->user_name . '</td>
 								</tr>
 								<tr>
-									<td>Password</td>
+									<td>Tanggal</td>
 									<td>:</td>
-									<td>' . $temp->user_password . '</td>
+									<td>' . $cbt_tanggal . '</td>
 								</tr>
 								<tr>
-									<td>Grup</td>
+									<td>Waktu Pengerjaan</td>
 									<td>:</td>
-									<td>' . $group . '</td>
+									<td>90 menit</td>
 								</tr>
 								<tr>
-									<td>Keterangan</td>
-									<td>:</td>
-									<td>' . $temp->user_detail . '</td>
+								<td></td>
 								</tr>
 							</table>
+							<h4>Pastikan siapkan perangkat dan sinyal yang memadai</h4> 
+							<div style="text-align: center">Selamat Mengerjakan, Jangan Lupa Berdoa Sebelum Memulai.</div>
+
 						</div>
 					';
 				}
