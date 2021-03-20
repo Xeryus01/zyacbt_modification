@@ -90,7 +90,8 @@ class Welcome extends CI_Controller
 					if (isset($_POST['submit'])) {
 						$this->load->library('form_validation');
 
-						$this->form_validation->set_rules('username', 'Username', 'required|strip_tags');
+						$this->form_validation->set_rules('username', 'Username', 'required|strip_tags|is_unique[cbt_user.user_name]',
+							['is_unique'=>'Username sudah dipakai.']);
 						$this->form_validation->set_rules('password', 'Password', 'required|strip_tags');
 						$this->form_validation->set_rules('name', 'Nama Lengkap', 'required|strip_tags');
 						$this->form_validation->set_rules('email', 'Email', 'required|valid_emails|strip_tags');
@@ -119,6 +120,11 @@ class Welcome extends CI_Controller
 
 									$status['status'] = 1;
 									$status['pesan'] = 'Data Peserta berhasil disimpan ';
+									$this->session->set_flashdata('sukses', '<div class="alert alert-success alert-dismissable">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									User <strong>Berhasil</strong> terdaftar, silahkan login untuk melanjutkan pembayaran
+								  </div>');
+									
 									redirect(base_url());
 								}
 							} else {
@@ -170,6 +176,8 @@ class Welcome extends CI_Controller
 		else if ($this->session->status != 3) redirect(base_url());
 		$data['url'] = $this->url;
 		$data['timestamp'] = strtotime(date('Y-m-d H:i:s'));
+		$id = $this->session->id;
+		$data['username'] = $this->cbt_user_model->get_user($id)[0]['user_name'];
 		if ($this->agent->is_browser()) {
 			if ($this->agent->browser() == 'Internet Explorer') {
 				$this->template->display_user('blokbrowser_view', 'Browser yang didukung');
@@ -201,7 +209,6 @@ class Welcome extends CI_Controller
 								'bukti' => $this->upload->data()['file_name'],
 								'status' => 2
 							];
-							$id = $this->session->id;
 							$this->cbt_user_model->upload_bukti_transfer($id, $file);
 							$this->session->unset_userdata('status');
 							$this->session->set_userdata('status', 2);
@@ -289,6 +296,12 @@ class Welcome extends CI_Controller
 	function logout()
 	{
 		$this->access_tes->logout();
+		redirect('welcome');
+	}
+	
+	public function logoutWaiting()
+	{
+		$this->access_tes->logoutWaiting();
 		redirect('welcome');
 	}
 

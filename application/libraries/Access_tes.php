@@ -93,9 +93,16 @@ class Access_tes
 	 */
 	function logout()
 	{
+		
 		$this->CI->session->unset_userdata('cbt_tes_user_id');
 		$this->CI->session->unset_userdata('cbt_tes_nama');
 		$this->CI->session->unset_userdata('cbt_tes_group_id');
 		$this->CI->session->unset_userdata('cbt_tes_group');
+	}
+	
+	public function logoutWaiting()
+	{
+		$this->CI->session->unset_userdata('id');
+		$this->CI->session->unset_userdata('status');
 	}
 }

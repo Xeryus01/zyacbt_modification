@@ -36,7 +36,7 @@
                     <div class="login-box-body">
 					
 					<div class="text-center" style="font-size:20px">
-					<label> Selamat datang USERNAME </label>
+					<label> Selamat datang <?= $username; ?> </label>
 					<p> Terima kasih telah mendaftar Try Out Zya CBT</p>
 					<p> Silahkan lalukan pembayaran sejumlah tertera diatas, ke nomor rekening sebagai berikut: </p>
 					<p> No Rekening :</p>

@@ -38,6 +38,7 @@
 						<div class="text-center">
 							<img src="<?php echo base_url(); ?>/Login.png" class="rounded" width="100px" height="100px">
 						</div>
+						<?= $this->session->flashdata('sukses'); ?>
 						<p class="login-box-msg">Masukkan Username dan Password</p>
 						<div id="form-pesan"></div>
 						<div class="form-group has-feedback">

@@ -23,7 +23,7 @@
 				<div class="panel panel-primary " >
                     <div class="panel-heading ">
                         <div class="panel-title ">
-							<strong ">
+							<strong>
 								<p style="font-size: 30px; position: relative;top:8px">REGISTRASI</p>
 							</strong>
 							<div style="float:right; font-size: 85%; position: relative; top:-15px">COMPUTER BASED-TEST Ujian Online Berbasis Komputer</div>

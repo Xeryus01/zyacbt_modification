@@ -55,6 +55,9 @@
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
                 <li><a href="#"><span id="timestamp"></span></a></li>
+                <?php if($this->session->userdata('status')==2||$this->session->userdata('status')==3): ?>
+                <li><a href="<?= base_url().'/welcome/logoutwaiting'; ?>">Logout</a></li>
+                <?php endif; ?>
               </ul>
             </div>
           </div><!-- /.container-fluid -->
@@ -69,7 +72,7 @@
             ?>
       </div><!-- /.content-wrapper -->
       <footer class="main-footer no-print">
-        <div class="pull-right hidden-xs">
+        <!-- <div class="pull-right hidden-xs">
 			<?php
 				if(!empty($link_login_operator)){
 					if($link_login_operator=='ya'){
@@ -83,7 +86,7 @@
 					<?php
 				}
 			?>
-        </div>
+        </div> -->
         <div class="container">
           <strong>&copy; 2020 achmadlutfi.wordpress.com</strong>
         </div><!-- /.container -->
